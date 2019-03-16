@@ -33,9 +33,9 @@ namespace LinkedList
                         orderedTasks[x] = tasks[i];
                         x++;
                     }
-                    else if (x > 0)
+                    else if (x > 0 && orderedTasks[x-1].NextTask == tasks[i].Id)
                     {
-                        orderedTasks[x] = tasks[orderedTasks[x-1].NextTask-1];
+                        orderedTasks[x] = tasks[i];
                         x++;
                     }
                 }
